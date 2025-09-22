@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions;
 
 // Pattern: Domain Event payload for pre-alarm notifications.
 public sealed record AlarmPreNotificationContext(

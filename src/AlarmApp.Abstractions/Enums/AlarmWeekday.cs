@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions;
 
 // Pattern: Bit Flag enumeration enabling composite weekday sets.
 [Flags]

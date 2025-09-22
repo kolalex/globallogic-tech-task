@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions;
 
 // Pattern: Adapter abstracting system clock access for testability.
 public interface ITimeProvider

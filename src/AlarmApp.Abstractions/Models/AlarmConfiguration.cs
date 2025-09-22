@@ -5,7 +5,7 @@ namespace AlarmApp.Abstractions;
 // Pattern: Data Transfer Object for persisting and editing alarm configuration.
 public sealed record AlarmConfiguration(
     TimeOnly TimeOfDay,
-    string? AlarmName,
+    AlarmLabel? AlarmName,
     SnoozeDurationOption SnoozeDuration,
-    string RingtoneId,
+    RingtoneIdentifier RingtoneId,
     AlarmRepeatConfiguration RepeatConfiguration);

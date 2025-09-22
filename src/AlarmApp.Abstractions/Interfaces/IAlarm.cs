@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions;
 
 // Pattern: DDD Aggregate Root interface representing a single alarm entity.
 public interface IAlarm
@@ -12,13 +10,13 @@ public interface IAlarm
     TimeOnly TimeOfDay { get; set; }
 
     // Gets or sets the name shown while the alarm is ringing; defaults to "Alarm" when null or empty.
-    string? AlarmName { get; set; }
+    AlarmLabel? AlarmName { get; set; }
 
     // Gets or sets the default snooze period used when user accepts the standard snooze action.
     SnoozeDurationOption SnoozeDuration { get; set; }
 
     // Gets or sets the identifier of the ringtone to play when the alarm fires.
-    string RingtoneId { get; set; }
+    RingtoneIdentifier RingtoneId { get; set; }
 
     // Gets or sets the repeat configuration controlling how the alarm behaves across days.
     AlarmRepeatConfiguration RepeatConfiguration { get; set; }
@@ -33,14 +31,14 @@ public interface IAlarm
     DateTime? NextScheduledOccurrence { get; }
 
     // Turns the alarm on so that it will be scheduled according to its repeat configuration.
-    void Enable();
+    Task EnableAsync();
 
     // Turns the alarm off until the user manually enables it again.
-    void Disable();
+    Task DisableAsync();
 
     // Marks the alarm as turned off for the remainder of the current day without altering future occurrences.
-    void DisableForToday();
+    Task DisableForTodayAsync();
 
     // Resets the daily execution state so the alarm can ring on its next scheduled day after being turned off for today.
-    void ResetDailyState();
+    Task ResetDailyStateAsync();
 }

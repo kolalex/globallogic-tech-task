@@ -7,6 +7,6 @@ public sealed record AlarmTriggerContext(
     Guid AlarmId,
     DateTime ScheduledTime,
     bool IsSnoozeTrigger,
-    string DisplayName,
-    string RingtoneId,
+    AlarmLabel DisplayName,
+    RingtoneIdentifier RingtoneId,
     SnoozeDurationOption DefaultSnoozeDuration);
