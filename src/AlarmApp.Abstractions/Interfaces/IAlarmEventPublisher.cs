@@ -1,4 +1,6 @@
-﻿namespace AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Models;
+
+namespace AlarmApp.Abstractions.Interfaces;
 
 // Pattern: Observer/Event Aggregator broadcasting alarm lifecycle events.
 public interface IAlarmEventPublisher

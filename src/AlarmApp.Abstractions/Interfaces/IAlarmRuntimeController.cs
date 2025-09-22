@@ -1,4 +1,6 @@
-﻿namespace AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Models;
+
+namespace AlarmApp.Abstractions.Interfaces;
 
 // Pattern: Command Handler coordinating runtime actions on alarms.
 public interface IAlarmRuntimeController

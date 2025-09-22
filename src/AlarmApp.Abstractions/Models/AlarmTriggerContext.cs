@@ -1,6 +1,6 @@
-﻿using System;
+﻿using AlarmApp.Abstractions.Enums;
 
-namespace AlarmApp.Abstractions;
+namespace AlarmApp.Abstractions.Models;
 
 // Pattern: Domain Event payload delivered when an alarm fires.
 public sealed record AlarmTriggerContext(

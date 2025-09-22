@@ -1,6 +1,6 @@
-﻿using System;
+﻿using AlarmApp.Abstractions.Enums;
 
-namespace AlarmApp.Abstractions;
+namespace AlarmApp.Abstractions.Models;
 
 // Pattern: Value Object ensuring repeat rules stay internally consistent.
 public sealed record class AlarmRepeatConfiguration

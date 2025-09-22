@@ -1,4 +1,4 @@
-﻿namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions.Models;
 
 // Pattern: Value Object ensuring labelled alarm text is validated and typed.
 public readonly record struct AlarmLabel

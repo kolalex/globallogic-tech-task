@@ -1,4 +1,4 @@
-﻿namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions.Interfaces;
 
 // Pattern: Strategy for computing alarm trigger and notification times.
 public interface IAlarmScheduleService

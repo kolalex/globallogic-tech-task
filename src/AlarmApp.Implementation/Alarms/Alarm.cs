@@ -1,38 +1,28 @@
-﻿using AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Enums;
+using AlarmApp.Abstractions.Interfaces;
+using AlarmApp.Abstractions.Models;
 
 namespace AlarmApp.Implementation.Alarms;
 
-internal sealed class Alarm : IAlarm
+internal sealed class Alarm(Guid id, AlarmConfiguration configuration) : IAlarm
 {
-    private bool _isEnabled;
-    private AlarmExecutionState _executionState;
+    private bool _isEnabled = true;
+    private AlarmExecutionState _executionState = AlarmExecutionState.Enabled;
     private DateTime? _nextScheduledOccurrence;
 
-    public Alarm(Guid id, AlarmConfiguration configuration)
-    {
-        Id = id;
-        TimeOfDay = configuration.TimeOfDay;
-        AlarmName = configuration.AlarmName;
-        SnoozeDuration = configuration.SnoozeDuration;
-        RingtoneId = configuration.RingtoneId;
-        RepeatConfiguration = configuration.RepeatConfiguration;
-        _isEnabled = true;
-        _executionState = AlarmExecutionState.Enabled;
-    }
+	public Guid Id { get; } = id;
 
-    public Guid Id { get; }
+	public TimeOnly TimeOfDay { get; set; } = configuration.TimeOfDay;
 
-    public TimeOnly TimeOfDay { get; set; }
+	public AlarmLabel? AlarmName { get; set; } = configuration.AlarmName;
 
-    public AlarmLabel? AlarmName { get; set; }
+	public SnoozeDurationOption SnoozeDuration { get; set; } = configuration.SnoozeDuration;
 
-    public SnoozeDurationOption SnoozeDuration { get; set; }
+	public RingtoneIdentifier RingtoneId { get; set; } = configuration.RingtoneId;
 
-    public RingtoneIdentifier RingtoneId { get; set; }
+	public AlarmRepeatConfiguration RepeatConfiguration { get; set; } = configuration.RepeatConfiguration;
 
-    public AlarmRepeatConfiguration RepeatConfiguration { get; set; }
-
-    public bool IsEnabled => _isEnabled;
+	public bool IsEnabled => _isEnabled;
 
     public AlarmExecutionState ExecutionState => _executionState;
 

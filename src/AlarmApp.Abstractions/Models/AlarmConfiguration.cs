@@ -1,6 +1,6 @@
-﻿using System;
+﻿using AlarmApp.Abstractions.Enums;
 
-namespace AlarmApp.Abstractions;
+namespace AlarmApp.Abstractions.Models;
 
 // Pattern: Data Transfer Object for persisting and editing alarm configuration.
 public sealed record AlarmConfiguration(

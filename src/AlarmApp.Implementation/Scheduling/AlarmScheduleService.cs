@@ -1,5 +1,4 @@
-﻿using System;
-using AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Interfaces;
 
 namespace AlarmApp.Implementation.Scheduling;
 

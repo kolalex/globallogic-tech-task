@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Interfaces;
+using AlarmApp.Abstractions.Models;
 using AlarmApp.Implementation.Alarms;
 
 namespace AlarmApp.Implementation.Collections;
 
 internal sealed class InMemoryAlarmCollection : IAlarmCollection
 {
-    private readonly Dictionary<Guid, Alarm> _alarms = new();
+    private readonly Dictionary<Guid, Alarm> _alarms = [];
 
-    public IReadOnlyList<IAlarm> Alarms => _alarms.Values.Cast<IAlarm>().ToList();
+    public IReadOnlyList<IAlarm> Alarms => [.. _alarms.Values.Cast<IAlarm>()];
 
     public Task<IAlarm> CreateAlarmAsync(AlarmConfiguration configuration)
     {

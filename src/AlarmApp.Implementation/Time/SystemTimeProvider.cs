@@ -1,4 +1,5 @@
-﻿using AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Enums;
+using AlarmApp.Abstractions.Interfaces;
 
 namespace AlarmApp.Implementation.Time;
 

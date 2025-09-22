@@ -1,6 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
-using AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Interfaces;
+using AlarmApp.Abstractions.Models;
 
 namespace AlarmApp.Implementation.Runtime;
 

@@ -1,4 +1,4 @@
-﻿namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions.Interfaces;
 
 // Pattern: Repository ensuring persistence concerns stay outside the domain model.
 public interface IAlarmStateRepository

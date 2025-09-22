@@ -1,4 +1,4 @@
-﻿namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions.Models;
 
 // Pattern: Value Object uniquely identifying a ringtone resource.
 public readonly record struct RingtoneIdentifier

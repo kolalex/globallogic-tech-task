@@ -1,4 +1,4 @@
-﻿namespace AlarmApp.Abstractions;
+﻿namespace AlarmApp.Abstractions.Enums;
 
 // Pattern: Enumerated Value Object for standard snooze durations.
 public enum SnoozeDurationOption

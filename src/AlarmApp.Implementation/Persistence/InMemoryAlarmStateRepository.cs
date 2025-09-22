@@ -1,18 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Interfaces;
 
 namespace AlarmApp.Implementation.Persistence;
 
 internal sealed class InMemoryAlarmStateRepository : IAlarmStateRepository
 {
-    private readonly List<IAlarm> _cache = new();
+    private readonly List<IAlarm> _cache = [];
 
     public Task<IReadOnlyList<IAlarm>> LoadAlarmsAsync()
     {
         // TODO: Load alarms from durable storage and hydrate the domain model.
-        return Task.FromResult<IReadOnlyList<IAlarm>>(_cache.ToList());
+        return Task.FromResult<IReadOnlyList<IAlarm>>([.. _cache]);
     }
 
     public Task SaveAlarmsAsync(IReadOnlyList<IAlarm> alarms)

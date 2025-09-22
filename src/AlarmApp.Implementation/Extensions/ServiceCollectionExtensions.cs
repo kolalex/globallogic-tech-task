@@ -1,4 +1,4 @@
-﻿using AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Interfaces;
 using AlarmApp.Implementation.Collections;
 using AlarmApp.Implementation.Persistence;
 using AlarmApp.Implementation.Runtime;

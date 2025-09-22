@@ -1,4 +1,6 @@
-﻿namespace AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Enums;
+
+namespace AlarmApp.Abstractions.Interfaces;
 
 // Pattern: Adapter abstracting system clock access for testability.
 public interface ITimeProvider

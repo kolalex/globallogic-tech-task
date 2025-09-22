@@ -1,4 +1,7 @@
-﻿namespace AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Enums;
+using AlarmApp.Abstractions.Models;
+
+namespace AlarmApp.Abstractions.Interfaces;
 
 // Pattern: DDD Aggregate Root interface representing a single alarm entity.
 public interface IAlarm

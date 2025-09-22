@@ -1,4 +1,6 @@
-﻿namespace AlarmApp.Abstractions;
+﻿using AlarmApp.Abstractions.Models;
+
+namespace AlarmApp.Abstractions.Interfaces;
 
 // Pattern: Facade exposing alarm management use-cases to clients.
 public interface IAlarmCollection
